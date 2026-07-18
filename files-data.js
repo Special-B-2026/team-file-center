@@ -2,84 +2,84 @@ const FILE_LIBRARY = [
 
 {
 name:"ใบคำขอสินเชื่อ.pdf",
-url:"Loan_Request.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Loan_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 },
 
 {
 name:"ใบคำขอสินเชื่อบุคคล.pdf",
-url:"PersonalLoanRequest.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Personal_Loan_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 },
 
 {
 name:"แบบคำนวณรายได้",
-url:"Income_Calculation.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Income_Calculation.xlsx",
 type:"EXCEL",
 group:"คำนวณ"
 },
 
 {
 name:"สรุปรายได้ (Sum Statement)",
-url:"Income_Summary.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Income_Summary.xlsx",
 type:"EXCEL",
 group:"คำนวณ"
 },
 
 {
 name:"ดอกเบี้ย.pdf",
-url:"Interest_Rate.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Interest_Rate.pdf",
 type:"PDF",
 group:"ดอกเบี้ย"
 },
 
 {
 name:"ลดดอกเบี้ย.xlsx",
-url:"Interest_Reduction.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Interest_Reduction.xlsx",
 type:"EXCEL",
 group:"ดอกเบี้ย"
 },
 
 {
-name:"MRTA.xlsx",
-url:"MRTA_Calculation.xlsx",
-type:"EXCEL",
-group:"ประกัน"
-},
-
-{
-name:"MRTA EXTRA.xlsx",
-url:"MRTA_Extra.xlsx",
-type:"EXCEL",
-group:"ประกัน"
-},
-
-{
 name:"MLTA.xlsx",
-url:"MLTA_Calculation.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MLTA_Calculation.xlsx",
 type:"EXCEL",
 group:"ประกัน"
 },
 
 {
 name:"MLTA EXTRA.xlsx",
-url:"MLTA_Extra.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MLTA_Extra.xlsx",
+type:"EXCEL",
+group:"ประกัน"
+},
+
+{
+name:"MRTA.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MRTA_Calculation.xlsx",
+type:"EXCEL",
+group:"ประกัน"
+},
+
+{
+name:"MRTA EXTRA.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MRTA_Extra.xlsx",
 type:"EXCEL",
 group:"ประกัน"
 },
 
 {
 name:"ค่าคอมมิชชั่น.pdf",
-url:"Commission.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Commission.pdf",
 type:"PDF",
-group:"ค่าคอม"
+group:"ค่าตอบแทน"
 },
 
 {
 name:"House100.docx",
-url:"House100.docx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/House100.docx",
 type:"WORD",
 group:"เอกสาร Word"
 }
