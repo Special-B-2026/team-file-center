@@ -3,32 +3,22 @@ let current = FILE_LIBRARY;
 const list = document.getElementById("fileList");
 
 
-// จำนวนไฟล์ทั้งหมด
-const count = document.getElementById("count");
-if(count){
-    count.innerText = FILE_LIBRARY.length;
-}
+// Dashboard
+
+document.getElementById("count").innerText =
+FILE_LIBRARY.length;
 
 
-// จำนวน PDF
-const pdf = document.getElementById("pdfCount");
-if(pdf){
-    pdf.innerText = FILE_LIBRARY.filter(f => f.type === "PDF").length;
-}
+document.getElementById("pdfCount").innerText =
+FILE_LIBRARY.filter(f => f.type === "PDF").length;
 
 
-// จำนวน Excel
-const excel = document.getElementById("excelCount");
-if(excel){
-    excel.innerText = FILE_LIBRARY.filter(f => f.type === "EXCEL").length;
-}
+document.getElementById("excelCount").innerText =
+FILE_LIBRARY.filter(f => f.type === "EXCEL").length;
 
 
-// จำนวน Word
-const word = document.getElementById("wordCount");
-if(word){
-    word.innerText = FILE_LIBRARY.filter(f => f.type === "WORD").length;
-}
+document.getElementById("wordCount").innerText =
+FILE_LIBRARY.filter(f => f.type === "WORD").length;
 
 
 
@@ -36,29 +26,40 @@ function show(data){
 
     list.innerHTML = "";
 
-    data.forEach(f => {
+    data.forEach(file => {
+
 
         list.innerHTML += `
 
         <div class="card">
 
-            <h3>${f.name}</h3>
+
+            <h3>${file.name}</h3>
+
 
             <p>
-                ${f.group || ""}
-                |
-                ${f.type}
+            ${file.group || "เอกสาร"}
+            |
+            ${file.type}
             </p>
 
 
-            <button onclick="window.open('${f.url}','_blank')">
-                ดาวน์โหลดไฟล์
-            </button>
+
+            <a class="download-btn"
+            href="${file.url}"
+            target="_blank"
+            download>
+
+            ดาวน์โหลดไฟล์
+
+            </a>
 
 
         </div>
 
+
         `;
+
 
     });
 
@@ -70,23 +71,21 @@ show(current);
 
 
 
-// ระบบค้นหา
-const search = document.getElementById("search");
 
-if(search){
+// Search
 
-    search.oninput = e => {
+document.getElementById("search").oninput = function(){
 
-        const keyword = e.target.value.toLowerCase();
-
-
-        const result = FILE_LIBRARY.filter(f =>
-            f.name.toLowerCase().includes(keyword)
-        );
+    let keyword =
+    this.value.toLowerCase();
 
 
-        show(result);
+    let result =
+    FILE_LIBRARY.filter(file =>
+    file.name.toLowerCase()
+    .includes(keyword));
 
-    };
 
-}
+    show(result);
+
+};
