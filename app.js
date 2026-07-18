@@ -3,28 +3,42 @@ let current = FILE_LIBRARY;
 const list = document.getElementById("fileList");
 
 
-// Dashboard
-
-document.getElementById("count").innerText =
-FILE_LIBRARY.length;
+// จำนวนไฟล์ทั้งหมด
+document.getElementById("count").innerText = FILE_LIBRARY.length;
 
 
-document.getElementById("pdfCount").innerText =
-FILE_LIBRARY.filter(f => f.type === "PDF").length;
+// จำนวน PDF
+const pdf = document.getElementById("pdfCount");
+if(pdf){
+    pdf.innerText = FILE_LIBRARY.filter(
+        f => f.type === "PDF"
+    ).length;
+}
 
 
-document.getElementById("excelCount").innerText =
-FILE_LIBRARY.filter(f => f.type === "EXCEL").length;
+// จำนวน EXCEL
+const excel = document.getElementById("excelCount");
+if(excel){
+    excel.innerText = FILE_LIBRARY.filter(
+        f => f.type === "EXCEL"
+    ).length;
+}
 
 
-document.getElementById("wordCount").innerText =
-FILE_LIBRARY.filter(f => f.type === "WORD").length;
+// จำนวน WORD
+const word = document.getElementById("wordCount");
+if(word){
+    word.innerText = FILE_LIBRARY.filter(
+        f => f.type === "WORD"
+    ).length;
+}
 
 
 
 function show(data){
 
     list.innerHTML = "";
+
 
     data.forEach(file => {
 
@@ -45,9 +59,10 @@ function show(data){
 
 
 
-            <a class="download-btn"
+            <a 
+            class="download-btn"
             href="${file.url}"
-            target="_blank"
+            target="_blank">
 
             ดาวน์โหลดไฟล์
 
@@ -56,35 +71,43 @@ function show(data){
 
         </div>
 
-
         `;
 
 
     });
 
+
 }
 
 
 
+// แสดงข้อมูลเริ่มต้น
 show(current);
 
 
 
+// ระบบค้นหา
+const search = document.getElementById("search");
 
-// Search
+if(search){
 
-document.getElementById("search").oninput = function(){
-
-    let keyword =
-    this.value.toLowerCase();
+search.addEventListener("input",()=>{
 
 
-    let result =
-    FILE_LIBRARY.filter(file =>
-    file.name.toLowerCase()
-    .includes(keyword));
+    const text = search.value.toLowerCase();
+
+
+    const result = FILE_LIBRARY.filter(file =>
+
+        file.name.toLowerCase().includes(text)
+
+    );
 
 
     show(result);
 
-};
+
+});
+
+
+}
