@@ -48,7 +48,6 @@ function show(data){
             <a class="download-btn"
             href="${file.url}"
             target="_blank"
-            download>
 
             ดาวน์โหลดไฟล์
 
