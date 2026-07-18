@@ -41,7 +41,7 @@ function show(data){
             ${f.type}
             </p>
 
-            <a href="${f.url}" target="_blank" download>
+            <a class="button" href="${f.url}" target="_blank" download>
             ดาวน์โหลดไฟล์
             </a>
 
