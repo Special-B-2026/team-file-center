@@ -31,7 +31,7 @@ function show(data){
 
         list.innerHTML += `
 
-        <div class="card">
+        <div class="file-card">
 
             <h3>${f.name}</h3>
 
