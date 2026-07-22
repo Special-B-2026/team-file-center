@@ -78,10 +78,10 @@ group:"ค่าตอบแทน"
 },
 
 {
-name:"House100.docx",
-url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/House100.docx",
-type:"WORD",
-group:"เอกสาร Word"
+name:".ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Customer_Data_Change_Request.pdf",
+type:"PDF",
+group:"แบบฟอร์ม"
 }
 
 ];
