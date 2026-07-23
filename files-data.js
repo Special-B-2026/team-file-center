@@ -22,7 +22,7 @@ group:"คำนวณ"
 },
 
 {
-name:"สรุปรายได้ (Sum Statement)",
+name:"สรุปรายได้ (Sum Statement).xlsx",
 url:"files/Income_Summary.xlsx",
 type:"EXCEL",
 group:"คำนวณ"
@@ -79,7 +79,7 @@ group:"อื่นๆ"
 
 {
 name:"ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า.pdf",
-url:"files/Customer_Change_Request.pdf",
+url:"files/Customer_Data_Change_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 }
