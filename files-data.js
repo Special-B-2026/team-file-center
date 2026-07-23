@@ -82,6 +82,55 @@ name:"ใบคำขอสินเชื่อบุคคล.pdf",
 url:"files/Personal_Loan_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
+},
+
+{
+name:"Sales Script สินเชื่อบ้าน",
+url:"files/Sales_Script_Loan.pdf",
+type:"PDF",
+group:"Sales Script"
+},
+
+{
+name:"Sales Script สินเชื่อบุคคล",
+url:"files/Sales_Script_PCN.pdf",
+type:"PDF",
+group:"Sales Script"
+},
+
+{
+name:"CALL AWAYA สินเชื่อบุคคล",
+url:"files/AWAYA_Sales_Script_UnSecuredLoan.pdf",
+type:"PDF",
+group:"AWAYA"
+},
+
+{
+name:"CALL AWAYA สินเชื่อบ้าน",
+url:"files/AWAYA_Sales_Script_SecuredLoan.pdf",
+type:"PDF",
+group:"AWAYA"
+},
+
+{
+name:"Sales Sheet บ้านแลกเงิน",
+url:"files/Sales_Sheet_MP.pdf",
+type:"PDF",
+group:"Sales Sheet"
+},
+
+{
+name:"Sales Sheet สินเชื่อบ้าน",
+url:"files/Sales_Sheet_HL.pdf",
+type:"PDF",
+group:"Sales Sheet"
+},
+
+{
+name:"Sales Sheet พร๊อพเพอร์ตี้",
+url:"files/Sales_Sheet_PY.pdf",
+type:"PDF",
+group:"Sales Sheet"
 }
 
 ];
