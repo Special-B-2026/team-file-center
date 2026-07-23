@@ -1,15 +1,15 @@
 const FILE_LIBRARY = [
 
 {
-name:"ใบคำขอสินเชื่อ.pdf",
-url:"files/Loan_Request.pdf",
+name:"Commission.pdf",
+url:"files/Commission.pdf",
 type:"PDF",
-group:"แบบฟอร์ม"
+group:"ดอกเบี้ย"
 },
 
 {
-name:"ใบคำขอสินเชื่อบุคคล.pdf",
-url:"files/Personal_Loan_Request.pdf",
+name:"ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า.pdf",
+url:"files/Customer_Data_Change_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 },
@@ -43,6 +43,13 @@ group:"ดอกเบี้ย"
 },
 
 {
+name:"ใบคำขอสินเชื่อ.pdf",
+url:"files/Loan_Request.pdf",
+type:"PDF",
+group:"แบบฟอร์ม"
+},
+
+{
 name:"MLTA.xlsx",
 url:"files/MLTA_Calculation.xlsx",
 type:"EXCEL",
@@ -71,15 +78,8 @@ group:"ประกัน"
 },
 
 {
-name:"ค่าคอมมิชชั่น.pdf",
-url:"files/Commission.pdf",
-type:"PDF",
-group:"อื่นๆ"
-},
-
-{
-name:"ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า.pdf",
-url:"files/Customer_Data_Change_Request.pdf",
+name:"ใบคำขอสินเชื่อบุคคล.pdf",
+url:"files/Personal_Loan_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 }
