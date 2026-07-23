@@ -1,40 +1,139 @@
+/* =========================
+   MP02 Chiangmai
+   Premium Document Center
+========================= */
+
+
+*{
+    box-sizing:border-box;
+}
+
+
 body{
 
-font-family:Tahoma,Arial;
-margin:0;
-background:#f7f7f7;
-color:#333;
+    margin:0;
+
+    font-family:
+    "Segoe UI",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff5f5,
+        #ffffff
+    );
+
+    color:#333;
 
 }
 
 
+/* ===== HEADER ===== */
 
 header{
 
-background:linear-gradient(135deg,#8b0000,#ff3b3b);
-color:white;
-text-align:center;
-padding:40px;
+    background:
+    linear-gradient(
+        135deg,
+        #b30000,
+        #ff4d4d
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    position:relative;
+
+    overflow:hidden;
 
 }
+
+
+/* แสงวิ่งบนหัวเว็บ */
+
+header::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+
+    animation:
+    shine 4s infinite;
+
+}
+
+
+@keyframes shine{
+
+    0%{
+        left:-100%;
+    }
+
+    50%,100%{
+        left:150%;
+    }
+
+}
+
 
 
 .logo{
 
-font-size:50px;
-font-weight:bold;
+    font-size:45px;
+
+    font-weight:900;
+
+    animation:
+    fadeDown 1s;
 
 }
 
 
 
+header p{
+
+    font-size:18px;
+
+}
+
+
+
+/* ===== DASHBOARD ===== */
+
+
 .dashboard{
 
-display:flex;
-gap:20px;
-justify-content:center;
-padding:20px;
-flex-wrap:wrap;
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    padding:25px;
 
 }
 
@@ -42,11 +141,21 @@ flex-wrap:wrap;
 
 .dashboard div{
 
-background:white;
-padding:25px 40px;
-border-radius:15px;
-box-shadow:0 5px 15px #ccc;
-text-align:center;
+    background:white;
+
+    min-width:150px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
+
+
+    animation:
+    floatCard 3s infinite;
 
 }
 
@@ -54,17 +163,24 @@ text-align:center;
 
 .dashboard b{
 
-font-size:28px;
-color:#c00000;
+    display:block;
+
+    font-size:32px;
+
+    color:#c00000;
 
 }
 
 
 
+/* ===== SEARCH ===== */
+
+
 .tools{
 
-text-align:center;
-padding:10px;
+    text-align:center;
+
+    padding:10px 20px;
 
 }
 
@@ -72,25 +188,52 @@ padding:10px;
 
 input{
 
-width:80%;
-padding:15px;
-border-radius:30px;
-border:1px solid #ccc;
+    width:90%;
+
+    max-width:600px;
+
+
+    padding:16px 25px;
+
+
+    border-radius:40px;
+
+
+    border:2px solid #eee;
+
+
+    font-size:16px;
+
+
+    outline:none;
 
 }
 
 
 
+input:focus{
+
+    border-color:#ff4d4d;
+
+}
+
+
+
+/* ===== FILE CARD ===== */
+
 
 main{
 
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
+    display:grid;
 
-gap:20px;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
 
-padding:25px;
+
+    gap:25px;
+
+
+    padding:30px;
 
 }
 
@@ -98,14 +241,30 @@ padding:25px;
 
 .card{
 
-background:white;
-border-radius:20px;
-padding:25px;
 
-box-shadow:
-0 5px 20px #ddd;
+    background:white;
 
-transition:.3s;
+
+    border-radius:25px;
+
+
+    padding:25px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.12);
+
+
+    animation:
+    cardShow .7s;
+
+
+    transition:.3s;
+
 
 }
 
@@ -113,54 +272,250 @@ transition:.3s;
 
 .card:hover{
 
-transform:translateY(-8px);
+    transform:
+    translateY(-10px);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.2);
 
 }
 
 
 
-.card h3{
+/* icon ไฟล์ */
 
-margin-top:0;
+.file-icon{
+
+    font-size:55px;
+
+    animation:
+
+    floating 2.5s infinite;
 
 }
 
+
+
+/* ===== BUTTON ===== */
 
 
 .download-btn{
 
-display:inline-block;
 
-background:#c00000;
+    display:inline-block;
 
-color:white;
 
-padding:12px 25px;
+    margin-top:15px;
 
-border-radius:10px;
 
-text-decoration:none;
+    background:
+
+    linear-gradient(
+    135deg,
+    #c00000,
+    #ff4d4d
+    );
+
+
+    color:white;
+
+
+    padding:
+
+    13px 30px;
+
+
+    border-radius:30px;
+
+
+    text-decoration:none;
+
+
+    font-weight:bold;
+
+
+    animation:
+
+    pulse 2s infinite;
+
 
 }
+
 
 
 
 .download-btn:hover{
 
-background:#8b0000;
+    transform:scale(1.08);
 
 }
 
 
 
-footer{
+/* ===== ANIMATION ===== */
 
-text-align:center;
 
-padding:20px;
+@keyframes cardShow{
 
-background:#222;
 
-color:white;
+from{
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+}
+
+
+
+@keyframes floating{
+
+
+0%,100%{
+
+    transform:
+    translateY(0);
+
+}
+
+
+50%{
+
+    transform:
+    translateY(-8px);
+
+}
+
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+    box-shadow:
+    0 0 0 0 rgba(255,0,0,.5);
+
+}
+
+
+70%{
+
+    box-shadow:
+    0 0 0 15px transparent;
+
+}
+
+
+100%{
+
+    box-shadow:
+    0 0 0 0 transparent;
+
+}
+
+}
+
+
+
+@keyframes floatCard{
+
+
+0%,100%{
+
+    transform:
+    translateY(0);
+
+}
+
+
+50%{
+
+    transform:
+    translateY(-5px);
+
+}
+
+}
+
+
+
+@keyframes fadeDown{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateY(-30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+
+
+/* ===== MOBILE ===== */
+
+
+@media(max-width:600px){
+
+
+.logo{
+
+    font-size:32px;
+
+}
+
+
+main{
+
+    padding:15px;
+
+}
+
+
+.card{
+
+    border-radius:20px;
+
+}
+
+
+.dashboard div{
+
+    width:90%;
+
+}
+
 
 }

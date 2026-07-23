@@ -1,75 +1,168 @@
 let current = FILE_LIBRARY;
 
+
 const list = document.getElementById("fileList");
 
 
-// จำนวนไฟล์ทั้งหมด
-document.getElementById("count").innerText = FILE_LIBRARY.length;
+
+// ======================
+// Dashboard Counter
+// ======================
 
 
-// จำนวน PDF
-const pdf = document.getElementById("pdfCount");
-if(pdf){
-    pdf.innerText = FILE_LIBRARY.filter(
-        f => f.type === "PDF"
-    ).length;
+const count = document.getElementById("count");
+
+if(count){
+
+    count.innerText = FILE_LIBRARY.length;
+
 }
 
 
-// จำนวน EXCEL
-const excel = document.getElementById("excelCount");
-if(excel){
-    excel.innerText = FILE_LIBRARY.filter(
-        f => f.type === "EXCEL"
+
+const pdfCount = document.getElementById("pdfCount");
+
+if(pdfCount){
+
+    pdfCount.innerText =
+    FILE_LIBRARY.filter(
+        f=>f.type==="PDF"
     ).length;
+
 }
 
 
-// จำนวน WORD
-const word = document.getElementById("wordCount");
-if(word){
-    word.innerText = FILE_LIBRARY.filter(
-        f => f.type === "WORD"
+
+const excelCount = document.getElementById("excelCount");
+
+if(excelCount){
+
+    excelCount.innerText =
+    FILE_LIBRARY.filter(
+        f=>f.type==="EXCEL"
     ).length;
+
 }
 
+
+
+const wordCount = document.getElementById("wordCount");
+
+if(wordCount){
+
+    wordCount.innerText =
+    FILE_LIBRARY.filter(
+        f=>f.type==="WORD"
+    ).length;
+
+}
+
+
+
+
+
+// ======================
+// File Icon
+// ======================
+
+
+function getIcon(type){
+
+
+    if(type==="PDF"){
+
+        return "📕";
+
+    }
+
+
+    if(type==="EXCEL"){
+
+        return "📗";
+
+    }
+
+
+    if(type==="WORD"){
+
+        return "📘";
+
+    }
+
+
+    return "📄";
+
+}
+
+
+
+
+
+// ======================
+// Show File Card
+// ======================
 
 
 function show(data){
 
-    list.innerHTML = "";
+
+    list.innerHTML="";
 
 
-    data.forEach(file => {
+
+    data.forEach((file,index)=>{
 
 
         list.innerHTML += `
 
-        <div class="card">
+
+        <div class="card"
+        style="animation-delay:${index*0.08}s">
 
 
-            <h3>${file.name}</h3>
+            <div class="file-icon">
+
+                ${getIcon(file.type)}
+
+            </div>
+
+
+
+            <h3>
+
+            ${file.name}
+
+            </h3>
+
 
 
             <p>
+
             ${file.group || "เอกสาร"}
-            |
-            ${file.type}
+
+            <br>
+
+            <b>${file.type}</b>
+
             </p>
 
 
 
-            <a 
+            <a
+
             class="download-btn"
+
             href="${file.url}"
+
             target="_blank">
 
-            ดาวน์โหลดไฟล์
+            ⬇ ดาวน์โหลดไฟล์
 
             </a>
 
 
         </div>
+
 
         `;
 
@@ -81,30 +174,59 @@ function show(data){
 
 
 
-// แสดงข้อมูลเริ่มต้น
+
+// เริ่มต้นแสดงไฟล์
+
 show(current);
 
 
 
-// ระบบค้นหา
-const search = document.getElementById("search");
+
+
+
+// ======================
+// Search System
+// ======================
+
+
+
+const search =
+document.getElementById("search");
+
+
 
 if(search){
 
-search.addEventListener("input",()=>{
+
+search.addEventListener(
+
+"input",
+
+function(){
 
 
-    const text = search.value.toLowerCase();
+
+    const keyword =
+    this.value.toLowerCase();
 
 
-    const result = FILE_LIBRARY.filter(file =>
 
-        file.name.toLowerCase().includes(text)
+
+    const result =
+    FILE_LIBRARY.filter(file=>
+
+
+        file.name
+        .toLowerCase()
+        .includes(keyword)
+
 
     );
 
 
+
     show(result);
+
 
 
 });
