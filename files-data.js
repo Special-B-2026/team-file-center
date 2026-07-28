@@ -1,136 +1,94 @@
 const FILE_LIBRARY = [
 
 {
-name:"Commission.pdf",
-url:"files/Commission.pdf",
-type:"PDF",
-group:"ดอกเบี้ย"
-},
-
-{
-name:"ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า.pdf",
-url:"files/Customer_Data_Change_Request.pdf",
+name:"ใบคำขอสินเชื่อ.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Loan_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 },
 
 {
-name:"แบบคำนวณรายได้.xlsx",
-url:"files/Income_Calculation.xlsx",
+name:"ใบคำขอสินเชื่อบุคคล.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Personal_Loan_Request.pdf",
+type:"PDF",
+group:"แบบฟอร์ม"
+},
+
+{
+name:"แบบคำนวณรายได้",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Income_Calculation.xlsx",
 type:"EXCEL",
 group:"คำนวณ"
 },
 
 {
-name:"สรุปรายได้ (Sum Statement).xlsx",
-url:"files/Income_Summary.xlsx",
+name:"สรุปรายได้ (Sum Statement)",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Income_Summary.xlsx",
 type:"EXCEL",
 group:"คำนวณ"
 },
 
 {
 name:"ดอกเบี้ย.pdf",
-url:"files/Interest_Rate.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Interest_Rate.pdf",
 type:"PDF",
 group:"ดอกเบี้ย"
 },
 
 {
 name:"ลดดอกเบี้ย.xlsx",
-url:"files/Interest_Reduction.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Interest_Reduction.xlsx",
 type:"EXCEL",
 group:"ดอกเบี้ย"
 },
 
 {
-name:"ใบคำขอสินเชื่อ.pdf",
-url:"files/Loan_Request.pdf",
-type:"PDF",
-group:"แบบฟอร์ม"
-},
-
-{
 name:"MLTA.xlsx",
-url:"files/MLTA_Calculation.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MLTA_Calculation.xlsx",
 type:"EXCEL",
 group:"ประกัน"
 },
 
 {
 name:"MLTA EXTRA.xlsx",
-url:"files/MLTA_Extra.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MLTA_Extra.xlsx",
 type:"EXCEL",
 group:"ประกัน"
 },
 
 {
 name:"MRTA.xlsx",
-url:"files/MRTA_Calculation.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MRTA_Calculation.xlsx",
 type:"EXCEL",
 group:"ประกัน"
 },
 
 {
 name:"MRTA EXTRA.xlsx",
-url:"files/MRTA_Extra.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/MRTA_Extra.xlsx",
 type:"EXCEL",
 group:"ประกัน"
 },
 
 {
-name:"ใบคำขอสินเชื่อบุคคล.pdf",
-url:"files/Personal_Loan_Request.pdf",
+name:"ค่าคอมมิชชั่น.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Commission.pdf",
+type:"PDF",
+group:"ค่าตอบแทน"
+},
+
+{
+name:".ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า.pdf",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/Customer_Data_Change_Request.pdf",
 type:"PDF",
 group:"แบบฟอร์ม"
 },
 
 {
-name:"Sales Script สินเชื่อบ้าน",
-url:"files/Sales_Script_Loan.pdf",
-type:"PDF",
-group:"Sales Script"
+name:"SiteVisit.xlsx",
+url:"https://raw.githubusercontent.com/Special-B-2026/team-file-center/main/SiteVisit.xlsx",
+type:"EXCEL",
+group:"SiteVisit"
 },
-
-{
-name:"Sales Script สินเชื่อบุคคล",
-url:"files/Sales_Script_PCN.pdf",
-type:"PDF",
-group:"Sales Script"
-},
-
-{
-name:"CALL AWAYA สินเชื่อบุคคล",
-url:"files/AWAYA_Sales_Script_UnSecuredLoan.pdf",
-type:"PDF",
-group:"AWAYA"
-},
-
-{
-name:"CALL AWAYA สินเชื่อบ้าน",
-url:"files/AWAYA_Sales_Script_SecuredLoan.pdf",
-type:"PDF",
-group:"AWAYA"
-},
-
-{
-name:"Sales Sheet บ้านแลกเงิน",
-url:"files/Sales_Sheet_MP.pdf",
-type:"PDF",
-group:"Sales Sheet"
-},
-
-{
-name:"Sales Sheet สินเชื่อบ้าน",
-url:"files/Sales_Sheet_HL.pdf",
-type:"PDF",
-group:"Sales Sheet"
-},
-
-{
-name:"Sales Sheet พร๊อพเพอร์ตี้",
-url:"files/Sales_Sheet_PY.pdf",
-type:"PDF",
-group:"Sales Sheet"
-}
 
 ];
