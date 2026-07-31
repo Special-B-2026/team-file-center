@@ -88,7 +88,8 @@ group:"Sales Script"
 name:"Sales Script PCN สินเชื่อบุคคล",
 url:"files/Sales_Script_PCN.pdf",
 type:"PDF",
-group:"Sales Script"
+group:"Sales Script",
+update:"2026-07-31"
 },
 
 {

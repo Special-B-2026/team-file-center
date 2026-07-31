@@ -93,8 +93,21 @@ ${icon}
 
 
 <h3>
-
 ${file.name}
+
+${
+file.update && 
+(
+(new Date() - new Date(file.update))
+/
+(1000*60*60*24)
+<=7
+)
+?
+'<span class="new-badge">NEW</span>'
+:
+''
+}
 
 </h3>
 
