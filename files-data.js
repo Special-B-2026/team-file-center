@@ -43,10 +43,11 @@ group:"ดอกเบี้ย"
 },
 
 {
-name:"ลดดอกเบี้ย",
+name:"ตารางขอลดดอกเบี้ย",
 url:"files/Interest_Reduction.xlsx",
 type:"EXCEL",
-group:"ดอกเบี้ย"
+group:"ดอกเบี้ย",
+update:"2026-08-05"
 },
 
 {
