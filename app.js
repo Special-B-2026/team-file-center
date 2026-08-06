@@ -77,18 +77,15 @@ file.type==="PDF"
 "📗";
 
 
-
 return `
 
 <div class="card">
-
 
 <div class="icon">
 
 ${icon}
 
 </div>
-
 
 
 <h3>
@@ -115,9 +112,7 @@ file.update &&
 
 }
 
-
 </h3>
-
 
 
 <p>
@@ -131,18 +126,13 @@ ${file.type}
 </p>
 
 
-
-<a
-
+<a 
 href="${file.url}"
-
 target="_blank"
+class="download"
+onclick="downloadCount('${file.url}')">
 
-class="download">
-
-
-↓ ดาวน์โหลดไฟล์
-
+⬇ ดาวน์โหลดไฟล์
 
 </a>
 
@@ -194,3 +184,26 @@ render(result);
 
 
 });
+
+function downloadCount(url){
+
+
+let filename =
+url.split("/").pop();
+
+
+
+fetch(
+"https://script.google.com/macros/s/AKfycbwYc5v4KWwzN0vRs51CHBE3P6Sgkoq_LIxhctwfkr08D_iRxV8IiblYfrBPKt3VHVu9kg/exec?file="
++
+filename
+);
+
+
+}
+
+
+
+
+
+
