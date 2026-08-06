@@ -147,7 +147,7 @@ class="download">
 
 
 render(FILE_LIBRARY);
-
+loadStatistics();
 
 
 
@@ -197,3 +197,31 @@ fetch(STAT_URL,{
 });
 
 }
+
+async function loadStatistics(){
+
+  const res = await fetch(STAT_URL);
+
+  const data = await res.json();
+
+  document.querySelectorAll(".card").forEach(card=>{
+
+    let name = card.dataset.name;
+
+    if(data[name]){
+
+      let count = document.createElement("div");
+
+      count.className="download-count";
+
+      count.innerHTML =
+      "ดาวน์โหลดแล้ว "+data[name]+" ครั้ง";
+
+      card.appendChild(count);
+
+    }
+
+  });
+
+}
+
