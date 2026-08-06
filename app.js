@@ -125,14 +125,16 @@ ${file.type}
 
 
 
-<a 
+<a
+onclick="trackDownload('${file.name}')"
 href="${file.url}"
 target="_blank"
 class="download">
 
-⬇ ดาวน์โหลดไฟล์
+↓ ดาวน์โหลดไฟล์
 
 </a>
+
 
 
 </div>
@@ -177,3 +179,21 @@ render(result);
 
 
 });
+
+const STAT_URL = 
+"https://script.google.com/macros/s/AKfycbxg-Lude_lyPCMhkUIuPE3bO9c_-o9qNHz3YMtrCwpMsVV4frXlFXb0_BVuLPk8xAVY/exec";
+
+
+function trackDownload(fileName){
+
+fetch(STAT_URL,{
+    method:"POST",
+    mode:"no-cors",
+    keepalive:true,
+    body:JSON.stringify({
+        file:fileName,
+        action:"Download"
+    })
+});
+
+}
