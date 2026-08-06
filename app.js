@@ -79,7 +79,8 @@ file.type==="PDF"
 
 return `
 
-<div class="card">
+<div class="card" data-file="$
+{file.name}">
 
 <div class="icon">
 
@@ -99,7 +100,7 @@ file.update &&
 (new Date() - new Date(file.update))
 /
 (1000*60*60*24)
-<=7
+<=7f
 )
 
 ?
@@ -185,22 +186,58 @@ render(result);
 
 });
 
-function downloadCount(url){
+async function loadDownloadCount(){
+
+const api =
+"https://script.google.com/macros/s/AKfycbwYc5v4KWwzN0vRs51CHBE3P6Sgkoq_LIxhctwfkr08D_iRxV8IiblYfrBPKt3VHVu9kg/exec?action=count";
 
 
-let filename =
-url.split("/").pop();
+const res =
+await fetch(api);
 
 
+const data =
+await res.json();
 
-fetch(
-"https://script.google.com/macros/s/AKfycbwYc5v4KWwzN0vRs51CHBE3P6Sgkoq_LIxhctwfkr08D_iRxV8IiblYfrBPKt3VHVu9kg/exec?file="
-+
-filename
+
+document
+.querySelectorAll(".card")
+.forEach(card=>{
+
+
+let name =
+card.dataset.file;
+
+
+let count =
+data[name] || 0;
+
+
+let div =
+document.createElement("div");
+
+
+div.className =
+"download-count";
+
+
+div.innerHTML =
+"📥 ดาวน์โหลด " + count + " ครั้ง";
+
+
+card.insertBefore(
+div,
+card.querySelector(".download")
 );
 
 
+});
+
+
 }
+
+
+loadDownloadCount();
 
 
 
