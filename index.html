@@ -1,132 +1,75 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Loan Document Center
-</title>
+<title>Loan Document Center</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
 
-
 <header>
-
-<h1>
-📂 Loan Document Center
-</h1>
-
-<h2>
-ระบบจัดเก็บและดาวน์โหลดเอกสารสินเชื่อ
-</h2>
-
-<p>
-Loan Document Management System
-</p>
-
+<h1>📁 Loan Document Center</h1>
+<p>ระบบเอกสารภายใน</p>
 </header>
 
 
+<section class="summary">
 
-<section class="dashboard">
-
-
-<div class="stat">
-<span>📁</span>
-<h3 id="totalCount">0</h3>
+<div class="box">
+<div>📂</div>
+<h2 id="allCount">0</h2>
 <p>ไฟล์ทั้งหมด</p>
 </div>
 
-
-<div class="stat pdf-box">
-<span>📕</span>
-<h3 id="pdfCount">0</h3>
+<div class="box">
+<div>📕</div>
+<h2 id="pdfCount">0</h2>
 <p>PDF</p>
 </div>
 
 
-<div class="stat excel-box">
-<span>📗</span>
-<h3 id="excelCount">0</h3>
+<div class="box">
+<div>📗</div>
+<h2 id="excelCount">0</h2>
 <p>Excel</p>
 </div>
-
 
 </section>
 
 
-
-
-<div class="search">
 
 <input 
 id="search"
 placeholder="🔍 ค้นหาเอกสาร..."
 >
 
-</div>
+
+<h2 class="title">📕 เอกสาร PDF</h2>
+
+<div id="pdfList" class="grid"></div>
 
 
 
+<h2 class="title">📗 เอกสาร Excel</h2>
 
-<section>
-
-<h2 class="title">
-📕 เอกสาร PDF
-</h2>
-
-
-<div 
-id="pdfList"
-class="grid">
-</div>
-
-
-</section>
-
-
-
-
-<section>
-
-<h2 class="title">
-📗 เอกสาร Excel
-</h2>
-
-
-<div 
-id="excelList"
-class="grid">
-</div>
-
-
-</section>
+<div id="excelList" class="grid"></div>
 
 
 
 <footer>
-
 Team File Center | Internal Document System
-
 </footer>
 
 
 
-
 <script src="files-data.js"></script>
-
 <script src="app.js"></script>
 
 
 </body>
-
 </html>

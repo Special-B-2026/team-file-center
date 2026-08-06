@@ -1,246 +1,162 @@
-const pdfList =
-document.getElementById("pdfList");
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwYc5v4KWwzN0vRs51CHBE3P6Sgkoq_LIxhctwfkr08D_iRxV8IiblYfrBPKt3VHVu9kg/exec";
 
 
-const excelList =
-document.getElementById("excelList");
+let downloadData={};
 
 
-const search =
-document.getElementById("search");
 
+async function loadCount(){
 
+const res =
+await fetch(API_URL+"?action=count");
 
-function render(data){
 
-
-pdfList.innerHTML="";
-excelList.innerHTML="";
-
-
-
-let pdf =
-data.filter(
-f=>f.type==="PDF"
-);
-
-
-
-let excel =
-data.filter(
-f=>f.type==="EXCEL"
-);
-
-
-
-pdf.forEach(file=>{
-
-
-pdfList.innerHTML += createCard(file);
-
-
-});
-
-
-
-excel.forEach(file=>{
-
-
-excelList.innerHTML += createCard(file);
-
-
-});
-
-
-
-document.getElementById("totalCount").innerText=data.length;
-
-
-document.getElementById("pdfCount").innerText=pdf.length;
-
-
-document.getElementById("excelCount").innerText=excel.length;
-
-
-}
-
-
-
-function createCard(file){
-
-
-let icon =
-file.type==="PDF"
-?
-"📕"
-:
-"📗";
-
-
-return `
-
-<div class="card" data-file="$
-{file.name}">
-
-<div class="icon">
-
-${icon}
-
-</div>
-
-
-<h3>
-
-${file.name}
-
-
-${
-file.update &&
-(
-(new Date() - new Date(file.update))
-/
-(1000*60*60*24)
-<=7f
-)
-
-?
-
-'<span class="new-badge">NEW</span>'
-
-:
-
-''
-
-}
-
-</h3>
-
-
-<p>
-
-${file.group}
-
-|
-
-${file.type}
-
-</p>
-
-
-<a 
-href="${file.url}"
-target="_blank"
-class="download"
-onclick="downloadCount('${file.url}')">
-
-⬇ ดาวน์โหลดไฟล์
-
-</a>
-
-
-
-</div>
-
-`;
-
-}
-
-
+downloadData =
+await res.json();
 
 
 render(FILE_LIBRARY);
 
+}
 
 
 
-search.addEventListener(
 
-"keyup",
-
-()=>{
+function render(files){
 
 
-let keyword =
-search.value.toLowerCase();
+let pdf="";
+let excel="";
+
+
+files.forEach(file=>{
+
+
+let icon =
+file.type=="PDF"
+?"📕"
+:"📗";
+
+
+let count =
+downloadData[file.name] || 0;
 
 
 
-let result =
+let card = `
 
-FILE_LIBRARY.filter(
 
-file=>
+<div class="card">
 
-file.name
-.toLowerCase()
-.includes(keyword)
 
+<div class="icon">
+${icon}
+</div>
+
+
+<h3>${file.name}</h3>
+
+
+<div class="download-count">
+
+⬇ ดาวน์โหลด ${count} ครั้ง
+
+</div>
+
+
+<a class="download"
+
+href="${file.url}"
+
+target="_blank"
+
+onclick="addDownload('${file.name}')"
+
+>
+
+ดาวน์โหลดไฟล์
+
+</a>
+
+
+</div>
+
+
+`;
+
+
+
+if(file.type=="PDF")
+
+pdf+=card;
+
+else
+
+excel+=card;
+
+
+
+});
+
+
+
+document.getElementById("pdfList").innerHTML=pdf;
+
+document.getElementById("excelList").innerHTML=excel;
+
+
+
+document.getElementById("allCount").innerHTML=files.length;
+
+
+document.getElementById("pdfCount").innerHTML=
+files.filter(x=>x.type=="PDF").length;
+
+
+document.getElementById("excelCount").innerHTML=
+files.filter(x=>x.type=="Excel").length;
+
+
+}
+
+
+
+function addDownload(name){
+
+
+fetch(
+API_URL+
+"?action=download&file="
++
+encodeURIComponent(name)
 
 );
 
+
+}
+
+
+
+document
+.getElementById("search")
+.addEventListener("keyup",function(){
+
+
+let keyword=this.value.toLowerCase();
+
+
+let result =
+FILE_LIBRARY.filter(
+x=>x.name.toLowerCase().includes(keyword)
+);
 
 
 render(result);
 
 
-
-});
-
-async function loadDownloadCount(){
-
-const api =
-"https://script.google.com/macros/s/AKfycbwYc5v4KWwzN0vRs51CHBE3P6Sgkoq_LIxhctwfkr08D_iRxV8IiblYfrBPKt3VHVu9kg/exec?action=count";
-
-
-const res =
-await fetch(api);
-
-
-const data =
-await res.json();
-
-
-document
-.querySelectorAll(".card")
-.forEach(card=>{
-
-
-let name =
-card.dataset.file;
-
-
-let count =
-data[name] || 0;
-
-
-let div =
-document.createElement("div");
-
-
-div.className =
-"download-count";
-
-
-div.innerHTML =
-"📥 ดาวน์โหลด " + count + " ครั้ง";
-
-
-card.insertBefore(
-div,
-card.querySelector(".download")
-);
-
-
 });
 
 
-}
 
-
-loadDownloadCount();
-
-
-
-
-
-
+loadCount();
