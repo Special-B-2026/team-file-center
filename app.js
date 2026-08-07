@@ -1,162 +1,277 @@
-const API_URL =
-"https://script.google.com/macros/s/AKfycbwYc5v4KWwzN0vRs51CHBE3P6Sgkoq_LIxhctwfkr08D_iRxV8IiblYfrBPKt3VHVu9kg/exec";
+// =======================================
+// Loan Document Center
+// app.js
+// Version: Stable
+// Compatible with FILE_LIBRARY
+// =======================================
 
 
-let downloadData={};
+document.addEventListener("DOMContentLoaded", function(){
+
+    if(typeof FILE_LIBRARY === "undefined"){
+        console.error("FILE_LIBRARY not found");
+        return;
+    }
 
 
+    renderFiles(FILE_LIBRARY);
 
-async function loadCount(){
+    updateSummary();
 
-const res =
-await fetch(API_URL+"?action=count");
-
-
-downloadData =
-await res.json();
-
-
-render(FILE_LIBRARY);
-
-}
-
-
-
-
-function render(files){
-
-
-let pdf="";
-let excel="";
-
-
-files.forEach(file=>{
-
-
-let icon =
-file.type=="PDF"
-?"📕"
-:"📗";
-
-
-let count =
-downloadData[file.name] || 0;
-
-
-
-let card = `
-
-
-<div class="card">
-
-
-<div class="icon">
-${icon}
-</div>
-
-
-<h3>${file.name}</h3>
-
-
-<div class="download-count">
-
-⬇ ดาวน์โหลด ${count} ครั้ง
-
-</div>
-
-
-<a class="download"
-
-href="${file.url}"
-
-target="_blank"
-
-onclick="addDownload('${file.name}')"
-
->
-
-ดาวน์โหลดไฟล์
-
-</a>
-
-
-</div>
-
-
-`;
-
-
-
-if(file.type=="PDF")
-
-pdf+=card;
-
-else
-
-excel+=card;
-
-
+    initSearch();
 
 });
 
 
 
-document.getElementById("pdfList").innerHTML=pdf;
 
-document.getElementById("excelList").innerHTML=excel;
+// =======================================
+// Render Files
+// =======================================
 
-
-
-document.getElementById("allCount").innerHTML=files.length;
-
-
-document.getElementById("pdfCount").innerHTML=
-files.filter(x=>x.type=="PDF").length;
+function renderFiles(data){
 
 
-document.getElementById("excelCount").innerHTML=
-files.filter(x=>x.type=="Excel").length;
+    const pdfBox = document.getElementById("pdfList");
+    const excelBox = document.getElementById("excelList");
+
+
+    if(pdfBox) pdfBox.innerHTML = "";
+    if(excelBox) excelBox.innerHTML = "";
+
+
+
+    data.forEach(file=>{
+
+
+        let card = createCard(file);
+
+
+        let type = file.type.toLowerCase();
+
+
+
+        if(type === "pdf"){
+
+            pdfBox.innerHTML += card;
+
+        }
+
+
+
+        else if(
+            type === "excel" ||
+            type === "xlsx"
+        ){
+
+            excelBox.innerHTML += card;
+
+        }
+
+
+    });
 
 
 }
 
 
 
-function addDownload(name){
 
 
-fetch(
-API_URL+
-"?action=download&file="
-+
-encodeURIComponent(name)
+// =======================================
+// Create Card
+// =======================================
 
-);
+function createCard(file){
+
+
+    let icon =
+    file.type.toLowerCase() === "pdf"
+    ? "📕"
+    : "📗";
+
+
+
+    return `
+
+    <div class="card">
+
+
+        <div class="icon">
+            ${icon}
+        </div>
+
+
+       <h3>
+${file.title}
+${file.isNew ? '<span class="new-badge">NEW</span>' : ''}
+</h3>
+
+
+        <p>
+            หมวดหมู่ : ${file.category}
+        </p>
+
+
+        <a 
+        class="download"
+        href="files/${file.fileName}"
+        target="_blank">
+
+        ดาวน์โหลด
+
+        </a>
+
+
+    </div>
+
+
+    `;
 
 
 }
 
 
 
-document
-.getElementById("search")
-.addEventListener("keyup",function(){
-
-
-let keyword=this.value.toLowerCase();
-
-
-let result =
-FILE_LIBRARY.filter(
-x=>x.name.toLowerCase().includes(keyword)
-);
-
-
-render(result);
-
-
-});
 
 
 
-loadCount();
+// =======================================
+// Summary
+// =======================================
+
+function updateSummary(){
+
+
+
+    let all =
+    FILE_LIBRARY.length;
+
+
+
+    let pdf =
+    FILE_LIBRARY.filter(file=>
+
+        file.type.toLowerCase()
+        === "pdf"
+
+    ).length;
+
+
+
+
+    let excel =
+    FILE_LIBRARY.filter(file=>
+
+        file.type.toLowerCase()
+        === "excel"
+        ||
+        file.type.toLowerCase()
+        === "xlsx"
+
+    ).length;
+
+
+
+
+
+    const allCount =
+    document.getElementById("allCount");
+
+
+    const pdfCount =
+    document.getElementById("pdfCount");
+
+
+    const excelCount =
+    document.getElementById("excelCount");
+
+
+
+
+
+    if(allCount)
+        allCount.innerText = all;
+
+
+
+    if(pdfCount)
+        pdfCount.innerText = pdf;
+
+
+
+    if(excelCount)
+        excelCount.innerText = excel;
+
+
+
+}
+
+
+
+
+
+
+
+// =======================================
+// Search
+// =======================================
+
+function initSearch(){
+
+
+
+    const search =
+    document.getElementById("search");
+
+
+
+    if(!search)
+        return;
+
+
+
+
+    search.addEventListener(
+    "input",
+    function(){
+
+
+        let keyword =
+        this.value
+        .toLowerCase();
+
+
+
+        let result =
+        FILE_LIBRARY.filter(file=>{
+
+
+            return (
+
+                file.title
+                .toLowerCase()
+                .includes(keyword)
+
+
+                ||
+
+                file.category
+                .toLowerCase()
+                .includes(keyword)
+
+            );
+
+
+        });
+
+
+
+        renderFiles(result);
+
+
+
+    });
+
+
+}
