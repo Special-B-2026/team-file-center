@@ -279,7 +279,7 @@ category:"โปรแกรมคำนวณ"
 
 {
 id:33,
-fileName:"Fire_Saleoffer.xlsx",
+fileName:"Fireoffer.xlsx",
 title:"เอกสารเสนอขายประกันอัคคีภัย",
 type:"excel",
 category:"ประกัน"
