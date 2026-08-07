@@ -143,76 +143,55 @@ target="_blank">
 
 function updateSummary(){
 
+    let all = FILE_LIBRARY.length;
 
-
-    let all =
-    FILE_LIBRARY.length;
-
-
-
-    let pdf =
-    FILE_LIBRARY.filter(file=>
-
-        file.type.toLowerCase()
-        === "pdf"
-
+    let pdf = FILE_LIBRARY.filter(file =>
+        file.type.toLowerCase() === "pdf"
     ).length;
 
 
-
-
-    let excel =
-    FILE_LIBRARY.filter(file=>
-
-        file.type.toLowerCase()
-        === "excel"
-        ||
-        file.type.toLowerCase()
-        === "xlsx"
-
+    let excel = FILE_LIBRARY.filter(file =>
+        file.type.toLowerCase() === "excel" ||
+        file.type.toLowerCase() === "xlsx"
     ).length;
 
 
-
-
-
-    const allCount =
-    document.getElementById("allCount");
-
-
-    const pdfCount =
-    document.getElementById("pdfCount");
-
-
-    const excelCount =
-    document.getElementById("excelCount");
-const viewElement =
-document.getElementById("viewCount");
-
-const downloadElement =
-document.getElementById("downloadCount");
-
-
+    const allCount = document.getElementById("allCount");
+    const pdfCount = document.getElementById("pdfCount");
+    const excelCount = document.getElementById("excelCount");
 
 
     if(allCount)
         allCount.innerText = all;
 
-
-
     if(pdfCount)
         pdfCount.innerText = pdf;
-
-
 
     if(excelCount)
         excelCount.innerText = excel;
 
-if(viewElement)
-    viewElement.innerText = views;
 
-if(downloadElement)
-    downloadElement.innerText = downloads;
+
+    fetch(STAT_API + "?action=summary")
+    .then(res => res.json())
+    .then(data => {
+
+        const viewElement =
+        document.getElementById("viewCount");
+
+        const downloadElement =
+        document.getElementById("downloadCount");
+
+
+        if(viewElement)
+            viewElement.innerText = data.views;
+
+
+        if(downloadElement)
+            downloadElement.innerText = data.downloads;
+
+    })
+    .catch(err => console.log(err));
 
 }
 
