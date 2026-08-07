@@ -178,9 +178,10 @@ category:"ประกัน"
 {
 id:21,
 fileName:"Interest_Rate.pdf",
-title:"ตารางอัตราดอกเบี้ย",
+title:"อัตราดอกเบี้ยปัจจุบัน",
 type:"pdf",
-category:"เอกสารทั่วไป"
+category:"เอกสารทั่วไป",
+isNew:true
 },
 
 {
@@ -207,7 +208,7 @@ category:"โปรแกรมคำนวณ"
 {
 id:24,
 fileName:"Income_Summary.xlsx",
-title:"สรุปรายได้",
+title:"สรุปรายได้SUMSTM",
 type:"excel",
 category:"โปรแกรมคำนวณ"
 },
