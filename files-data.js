@@ -14,7 +14,7 @@ category:"สินเชื่อ"
 
 {
 id:2,
-fileName:"Personal_Loan_Request.pdf",
+fileName:"PersonalLoanRequest.pdf",
 title:"ใบคำขอสินเชื่อบุคคล",
 type:"pdf",
 category:"สินเชื่อ"
@@ -22,7 +22,7 @@ category:"สินเชื่อ"
 
 {
 id:3,
-fileName:"Customer_Data_Change_Request.pdf",
+fileName:"ChangeRequest.pdf",
 title:"ใบคำขอเปลี่ยนแปลงข้อมูลลูกค้า",
 type:"pdf",
 category:"สินเชื่อ"
