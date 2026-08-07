@@ -276,7 +276,17 @@ function countView(){
         .catch(error => console.log(error));
 
 }
+function getSummary(){
 
+  fetch(STAT_API + "?action=summary")
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      updateSummary(data);
+  })
+  .catch(error => console.log(error));
+
+}
 function countDownload(fileName){
 
 fetch(STAT_API + "?action=download&file=" + encodeURIComponent(fileName))
@@ -285,7 +295,7 @@ fetch(STAT_API + "?action=download&file=" + encodeURIComponent(fileName))
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  updateSummary();
+  getSummary();
 });
 
 
