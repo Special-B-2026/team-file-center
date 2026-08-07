@@ -5,6 +5,9 @@
 // Compatible with FILE_LIBRARY
 // =======================================
 
+const STAT_API =
+"https://script.google.com/macros/s/AKfycbyLxywK5BQ25-ZaPqvG1g_Lxlj4vdpnvpkIUdDHMJ95RLUScVInFnm-wCP-PM0Tss64AA/exec";
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -13,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
         return;
     }
 
-
+    countView();
     renderFiles(FILE_LIBRARY);
 
     updateSummary();
@@ -113,14 +116,13 @@ ${file.isNew ? '<span class="new-badge">NEW</span>' : ''}
         </p>
 
 
-        <a 
-        class="download"
-        href="files/${file.fileName}"
-        target="_blank">
-
-        ดาวน์โหลด
-
-        </a>
+        <a
+class="download"
+href="files/${file.fileName}"
+target="_blank"
+onclick="countDownload('${file.fileName}')">
+ดาวน์โหลด
+</a>
 
 
     </div>
@@ -185,7 +187,11 @@ function updateSummary(){
 
     const excelCount =
     document.getElementById("excelCount");
+const viewElement =
+document.getElementById("viewCount");
 
+const downloadElement =
+document.getElementById("downloadCount");
 
 
 
@@ -203,7 +209,11 @@ function updateSummary(){
     if(excelCount)
         excelCount.innerText = excel;
 
+if(viewElement)
+    viewElement.innerText = views;
 
+if(downloadElement)
+    downloadElement.innerText = downloads;
 
 }
 
@@ -275,3 +285,24 @@ function initSearch(){
 
 
 }
+
+function countView(){
+
+    fetch(STAT_API + "?action=view")
+        .then(response => console.log("View counted"))
+        .catch(error => console.log(error));
+
+}
+
+function countDownload(fileName){
+
+fetch(STAT_API + "?action=download&file=" + encodeURIComponent(fileName))
+.then(response => console.log("Download counted"))
+.catch(error => console.log(error));
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  updateSummary();
+});
+
+
