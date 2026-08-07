@@ -183,13 +183,18 @@ function updateSummary(){
         document.getElementById("downloadCount");
 
 
-        if(viewElement)
-            viewElement.innerText = data.views;
+        fetch(STAT_API + "?action=summary")
+.then(response => response.json())
+.then(data => {
 
+    if(viewElement)
+        viewElement.innerText = data.views || 0;
 
-        if(downloadElement)
-            downloadElement.innerText = data.downloads;
+    if(downloadElement)
+        downloadElement.innerText = data.downloads || 0;
 
+})
+.catch(error => console.log(error));
     })
     .catch(err => console.log(err));
 
