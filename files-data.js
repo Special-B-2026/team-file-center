@@ -9,7 +9,8 @@ id:1,
 fileName:"Loan_Request.pdf",
 title:"ใบคำขอสินเชื่อบ้าน",
 type:"pdf",
-category:"สินเชื่อ"
+category:"สินเชื่อ",
+updateDate:"2026-08-08"
 },
 
 {
@@ -282,7 +283,8 @@ id:33,
 fileName:"Fireoffer.xlsx",
 title:"เอกสารเสนอขายประกันอัคคีภัย",
 type:"excel",
-category:"ประกัน"
+category:"ประกัน",
+updateDate:"2026-08-08"
 }
 
 ];
