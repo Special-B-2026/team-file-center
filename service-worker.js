@@ -1,4 +1,4 @@
-const CACHE_NAME = "loan-center-v1";
+const CACHE_NAME = "loan-center-v2";
 
 const FILES_TO_CACHE = [
   "./",
