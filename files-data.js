@@ -9,8 +9,7 @@ id:1,
 fileName:"Loan_Request.pdf",
 title:"ใบคำขอสินเชื่อบ้าน",
 type:"pdf",
-category:"สินเชื่อ",
-updateDate:"2026-08-08"
+category:"สินเชื่อ"
 },
 
 {
@@ -67,7 +66,6 @@ fileName:"Sales_Sheet_HL.pdf",
 title:"Sales Sheet สินเชื่อบ้าน",
 type:"pdf",
 category:"สินเชื่อ",
-updateDate:"2026-08-13",
 isNew:true
 },
 
@@ -77,7 +75,6 @@ fileName:"Sales_Sheet_MP.pdf",
 title:"Sales Sheet สินเชื่ออเนกประสงค์",
 type:"pdf",
 category:"สินเชื่อ",
-updateDate:"2026-08-13",
 isNew:true
 },
 
@@ -87,7 +84,6 @@ fileName:"Sales_Sheet_PY.pdf",
 title:"Sales Sheet PY",
 type:"pdf",
 category:"สินเชื่อ",
-updateDate:"2026-08-13",
 isNew:true
 },
 
