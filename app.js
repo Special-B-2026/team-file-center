@@ -119,7 +119,6 @@ ${file.isNew ? '<span class="new-badge">NEW</span>' : ''}
         <a
 class="download"
 href="./files/${file.fileName}"
-target="_blank"
 onclick="countDownload('${file.fileName}')">
 ดาวน์โหลด
 </a>
