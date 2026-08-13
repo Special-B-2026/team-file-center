@@ -136,7 +136,7 @@ id:16,
 fileName:"Brochure_PA.pdf",
 title:"โบรชัวร์ประกัน PA",
 type:"pdf",
-category:"ประกัน"
+category:"โปรชัวร์"
 },
 
 {
@@ -144,7 +144,7 @@ id:17,
 fileName:"Brochure_Cancer.pdf",
 title:"โบรชัวร์ประกันมะเร็ง",
 type:"pdf",
-category:"ประกัน"
+category:"โปรชัวร์"
 },
 
 {
@@ -152,7 +152,7 @@ id:18,
 fileName:"Brochure_Homecare.pdf",
 title:"โบรชัวร์ Homecare",
 type:"pdf",
-category:"ประกัน"
+category:"โปรชัวร์"
 },
 
 {
@@ -160,7 +160,7 @@ id:19,
 fileName:"Brochure_Moter1.pdf",
 title:"โบรชัวร์ประกันรถยนต์ 1",
 type:"pdf",
-category:"ประกัน"
+category:"โปรชัวร์"
 },
 
 {
@@ -168,7 +168,7 @@ id:20,
 fileName:"Brochure_Moter23.pdf",
 title:"โบรชัวร์ประกันรถยนต์ 2 และ 3",
 type:"pdf",
-category:"ประกัน"
+category:"โปรชัวร์"
 },
 
 
@@ -283,8 +283,52 @@ id:33,
 fileName:"Fireoffer.xlsx",
 title:"เอกสารเสนอขายประกันอัคคีภัย",
 type:"excel",
-category:"ประกัน",
-updateDate:"2026-08-08"
+category:"ประกัน"
+},
+
+{
+id:34,
+fileName:"Brochure_Balance.pdf",
+title:"โปรชัวร์Re-Balance",
+type:"pdf",
+category:"โปรชัวร์",
+updateDate:"2026-08-13"
+},
+
+{
+id:35,
+fileName:"Brochure_home2.pdf",
+title:"โปรชัวร์บ้านมือสอง",
+type:"pdf",
+category:"โปรชัวร์",
+updateDate:"2026-08-13"
+},
+
+{
+id:36,
+fileName:"Brochure_Mp.pdf",
+title:"โปรชัวร์บ้านแลกเงิน",
+type:"pdf",
+category:"โปรชัวร์",
+updateDate:"2026-08-13"
+},
+
+{
+id:37,
+fileName:"Brochure_Re-cashout.pdf",
+title:"โปรชัวร์Re-Cashout",
+type:"pdf",
+category:"โปรชัวร์",
+updateDate:"2026-08-13"
+},
+
+{
+id:38,
+fileName:"Brochure_PCN.pdf",
+title:"โปรชัวร์สินเชื่อบุคคล",
+type:"pdf",
+category:"โปรชัวร์",
+updateDate:"2026-08-13"
 }
 
 ];
