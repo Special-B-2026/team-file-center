@@ -355,7 +355,36 @@ type:"xlsx",
 category:"แบบฟอร์ม",
 updateDate:"2026-08-14",
 isNew:true
-}
+},
 
+{
+id:41,
+fileName:"Doc_Mp.pdf",
+title:"เอกสารที่ต้องเตรียม บ้านแลกเงิน",
+type:"pdf",
+category:"เอกสารทั่วไป",
+updateDate:"2026-08-14",
+isNew:true
+},
+
+{
+id:42,
+fileName:"Doc_buyhouse.pdf",
+title:"เอกสารที่ต้องเตรียม ซื้อบ้าน",
+type:"pdf",
+category:"เอกสารทั่วไป",
+updateDate:"2026-08-14",
+isNew:true
+},
+
+{
+id:43,
+fileName:"Doc_Refinance.pdf",
+title:"เอกสารที่ต้องเตรียม รีไฟแนนซ์",
+type:"pdf",
+category:"เอกสารทั่วไป",
+updateDate:"2026-08-14",
+isNew:true
+},
 
 ];
