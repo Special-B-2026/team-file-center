@@ -335,6 +335,27 @@ type:"pdf",
 category:"โปรชัวร์",
 updateDate:"2026-08-13",
 isNew:true
+},
+
+{
+id:39,
+fileName:"Commission_Simulation.xlsx",
+title:"โปรแกรมคำนวณค่าคอมฯ",
+type:"xlsx",
+category:"แบบฟอร์ม",
+updateDate:"2026-08-14",
+isNew:true
+},
+
+{
+id:40,
+fileName:"Formprice.xlsx",
+title:"แบบคำขออุทธรณ์ราคาประเมิน",
+type:"xlsx",
+category:"แบบฟอร์ม",
+updateDate:"2026-08-14",
+isNew:true
 }
+
 
 ];
