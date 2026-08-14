@@ -387,4 +387,25 @@ updateDate:"2026-08-14",
 isNew:true
 },
 
+{
+id:44,
+fileName:"Doc_approve.xlsx",
+title:"หนังสืออนุมัติ",
+type:"xlsx",
+category:"เอกสารทั่วไป",
+updateDate:"2026-08-14",
+isNew:true
+},
+
+{
+id:45,
+fileName:"Doc_decline.xlsx",
+title:"หนังสือปฏิเสธ",
+type:"xlsx",
+category:"เอกสารทั่วไป",
+updateDate:"2026-08-14",
+isNew:true
+}
+
+
 ];
