@@ -351,7 +351,7 @@ title:"เอกสารที่ต้องเตรียม บ้านแ
 type:"pdf",
 category:"เอกสารทั่วไป",
 updateDate:"2026-08-14",
-isNew:true
+isNew:false
 },
 
 {
@@ -361,7 +361,7 @@ title:"เอกสารที่ต้องเตรียม ซื้อบ
 type:"pdf",
 category:"เอกสารทั่วไป",
 updateDate:"2026-08-14",
-isNew:true
+isNew:false
 },
 
 {
@@ -371,7 +371,7 @@ title:"เอกสารที่ต้องเตรียม รีไฟแ
 type:"pdf",
 category:"เอกสารทั่วไป",
 updateDate:"2026-08-14",
-isNew:true
+isNew:false
 },
 
 {
@@ -381,7 +381,7 @@ title:"หนังสืออนุมัติ",
 type:"xlsx",
 category:"เอกสารทั่วไป",
 updateDate:"2026-08-14",
-isNew:true
+isNew:false
 },
 
 {
@@ -391,7 +391,7 @@ title:"หนังสือปฏิเสธ",
 type:"xlsx",
 category:"เอกสารทั่วไป",
 updateDate:"2026-08-14",
-isNew:true
+isNew:false
 }
 
 
