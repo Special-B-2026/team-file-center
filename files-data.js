@@ -65,8 +65,7 @@ id:8,
 fileName:"Sales_Sheet_HL.pdf",
 title:"Sales Sheet สินเชื่อบ้าน",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 {
@@ -74,8 +73,7 @@ id:9,
 fileName:"Sales_Sheet_MP.pdf",
 title:"Sales Sheet สินเชื่ออเนกประสงค์",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 {
@@ -83,8 +81,7 @@ id:10,
 fileName:"Sales_Sheet_PY.pdf",
 title:"Sales Sheet PY",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 
@@ -292,9 +289,7 @@ id:34,
 fileName:"Brochure_Balance.pdf",
 title:"โปรชัวร์Re-Balance",
 type:"pdf",
-category:"โปรชัวร์",
-updateDate:"2026-08-13",
-isNew:true
+category:"โปรชัวร์"
 },
 
 {
@@ -302,9 +297,7 @@ id:35,
 fileName:"Brochure_home2.pdf",
 title:"โปรชัวร์บ้านมือสอง",
 type:"pdf",
-category:"โปรชัวร์",
-updateDate:"2026-08-13",
-isNew:true
+category:"โปรชัวร์"
 },
 
 {
@@ -312,9 +305,7 @@ id:36,
 fileName:"Brochure_Mp.pdf",
 title:"โปรชัวร์บ้านแลกเงิน",
 type:"pdf",
-category:"โปรชัวร์",
-updateDate:"2026-08-13",
-isNew:true
+category:"โปรชัวร์"
 },
 
 {
@@ -322,9 +313,7 @@ id:37,
 fileName:"Brochure_Re-cashout.pdf",
 title:"โปรชัวร์Re-Cashout",
 type:"pdf",
-category:"โปรชัวร์",
-updateDate:"2026-08-13",
-isNew:true
+category:"โปรชัวร์"
 },
 
 {
@@ -332,9 +321,7 @@ id:38,
 fileName:"Brochure_PCN.pdf",
 title:"โปรชัวร์สินเชื่อบุคคล",
 type:"pdf",
-category:"โปรชัวร์",
-updateDate:"2026-08-13",
-isNew:true
+category:"โปรชัวร์"
 },
 
 {
