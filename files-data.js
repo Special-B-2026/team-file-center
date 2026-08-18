@@ -33,7 +33,8 @@ id:4,
 fileName:"Sales_Script_Loan.pdf",
 title:"SaleScript HL",
 type:"pdf",
-category:"สินเชื่อ"
+category:"สินเชื่อ",
+isNew:true
 },
 
 {
@@ -41,7 +42,8 @@ id:5,
 fileName:"Sales_Script_PCN.pdf",
 title:"SaleScript PCN",
 type:"pdf",
-category:"สินเชื่อ"
+category:"สินเชื่อ",
+isNew:true
 },
 
 {
@@ -49,7 +51,8 @@ id:6,
 fileName:"AWAYA_Sales_Script_SecuredLoan.pdf",
 title:"สินเชื่อมีหลักประกัน โทรAWAYA",
 type:"pdf",
-category:"สินเชื่อ"
+category:"สินเชื่อ",
+isNew:true
 },
 
 {
@@ -57,7 +60,8 @@ id:7,
 fileName:"AWAYA_Sales_Script_UnSecuredLoan.pdf",
 title:"สินเชื่อไม่มีหลักประกัน โทรAWAYA",
 type:"pdf",
-category:"สินเชื่อ"
+category:"สินเชื่อ",
+isNew:true
 },
 
 {
@@ -225,7 +229,8 @@ id:26,
 fileName:"Interest_Reduction.xlsx",
 title:"ตารางลดดอกเบี้ย",
 type:"excel",
-category:"โปรแกรมคำนวณ"
+category:"โปรแกรมคำนวณ",
+isNew:true
 },
 
 {
@@ -339,9 +344,7 @@ id:40,
 fileName:"Formprice.xlsx",
 title:"แบบคำขออุทธรณ์ราคาประเมิน",
 type:"xlsx",
-category:"แบบฟอร์ม",
-updateDate:"2026-08-14",
-isNew:true
+category:"แบบฟอร์ม"
 },
 
 {
@@ -349,9 +352,7 @@ id:41,
 fileName:"Doc_Mp.pdf",
 title:"เอกสารที่ต้องเตรียม บ้านแลกเงิน",
 type:"pdf",
-category:"เอกสารทั่วไป",
-updateDate:"2026-08-14",
-isNew:false
+category:"เอกสารทั่วไป"
 },
 
 {
@@ -359,9 +360,7 @@ id:42,
 fileName:"Doc_buyhouse.pdf",
 title:"เอกสารที่ต้องเตรียม ซื้อบ้าน",
 type:"pdf",
-category:"เอกสารทั่วไป",
-updateDate:"2026-08-14",
-isNew:false
+category:"เอกสารทั่วไป"
 },
 
 {
@@ -369,9 +368,7 @@ id:43,
 fileName:"Doc_Refinance.pdf",
 title:"เอกสารที่ต้องเตรียม รีไฟแนนซ์",
 type:"pdf",
-category:"เอกสารทั่วไป",
-updateDate:"2026-08-14",
-isNew:false
+category:"เอกสารทั่วไป"
 },
 
 {
@@ -379,9 +376,7 @@ id:44,
 fileName:"Doc_approve.xlsx",
 title:"หนังสืออนุมัติ",
 type:"xlsx",
-category:"เอกสารทั่วไป",
-updateDate:"2026-08-14",
-isNew:false
+category:"เอกสารทั่วไป"
 },
 
 {
@@ -389,9 +384,7 @@ id:45,
 fileName:"Doc_decline.xlsx",
 title:"หนังสือปฏิเสธ",
 type:"xlsx",
-category:"เอกสารทั่วไป",
-updateDate:"2026-08-14",
-isNew:false
+category:"เอกสารทั่วไป"
 }
 
 
