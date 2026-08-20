@@ -33,8 +33,7 @@ id:4,
 fileName:"Sales_Script_Loan.pdf",
 title:"SaleScript HL",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 {
@@ -42,8 +41,7 @@ id:5,
 fileName:"Sales_Script_PCN.pdf",
 title:"SaleScript PCN",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 {
@@ -51,8 +49,7 @@ id:6,
 fileName:"AWAYA_Sales_Script_SecuredLoan.pdf",
 title:"สินเชื่อมีหลักประกัน โทรAWAYA",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 {
@@ -60,8 +57,7 @@ id:7,
 fileName:"AWAYA_Sales_Script_UnSecuredLoan.pdf",
 title:"สินเชื่อไม่มีหลักประกัน โทรAWAYA",
 type:"pdf",
-category:"สินเชื่อ",
-isNew:true
+category:"สินเชื่อ"
 },
 
 {
@@ -335,8 +331,7 @@ fileName:"Commission_Simulation.xlsx",
 title:"โปรแกรมคำนวณค่าคอมฯ",
 type:"xlsx",
 category:"แบบฟอร์ม",
-updateDate:"2026-08-14",
-isNew:true
+updateDate:"2026-08-14"
 },
 
 {
@@ -385,7 +380,16 @@ fileName:"Doc_decline.xlsx",
 title:"หนังสือปฏิเสธ",
 type:"xlsx",
 category:"เอกสารทั่วไป"
-}
+},
+
+{
+id:46,
+fileName:"payment.pdf",
+title:"การโปะค่างวดบ้าน",
+type:"pdf",
+category:"เอกสารทั่วไป",
+isNew:true
+},
 
 
 ];
