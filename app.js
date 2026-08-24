@@ -1,10 +1,13 @@
-// =======================================
+// =================================
 // Loan Document Center
 // app.js
 // Version: Stable
 // Compatible with FILE_LIBRARY
-// =======================================
-
+// =================================
+// CHECK LOGIN
+if(sessionStorage.getItem("login") !== "true"){
+    window.location.href = "login.html";
+}
 const STAT_API =
 "https://script.google.com/macros/s/AKfycbyLxywK5BQ25-ZaPqvG1g_Lxlj4vdpnvpkIUdDHMJ95RLUScVInFnm-wCP-PM0Tss64AA/exec";
 
@@ -22,6 +25,19 @@ document.addEventListener("DOMContentLoaded", function(){
     updateSummary();
 
     initSearch();
+    
+const user = JSON.parse(sessionStorage.getItem("user"));
+
+if(user){
+    document.getElementById("userInfo").innerHTML =
+    "ผู้ใช้งาน : " 
++ user.name
++ " | สิทธิ์ : "
++ user.role.toUpperCase();
+if(user.role !== "admin"){
+    document.getElementById("adminPanel").style.display="none";
+}
+}
 
 });
 

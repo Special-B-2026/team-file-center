@@ -33,7 +33,9 @@ Loan Document Center
 <p>
 Loan Document Management System
 </p>
+<div id="userInfo"></div>
 
+<button onclick="logout()">ออกจากระบบ</button>
 </header>
 
 
@@ -87,7 +89,21 @@ placeholder="🔍 ค้นหาเอกสาร..."
 
 </div>
 
+<section id="adminPanel">
 
+<h2 class="title">
+⚙️ Admin Control
+</h2>
+
+<button>
+Upload File
+</button>
+
+<button>
+Manage User
+</button>
+
+</section>
 
 
 <section>
@@ -137,6 +153,8 @@ Team File Center | Internal Document System
 <script src="files-data.js"></script>
 
 <script src="app.js"></script>
+
+<script src="logout.js"></script>
 
 <script>
 if ("serviceWorker" in navigator) {
