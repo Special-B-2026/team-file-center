@@ -391,5 +391,15 @@ category:"เอกสารทั่วไป",
 isNew:true
 },
 
+{
+id:47,
+fileName:"Loan_Proposal.xlsx",
+title:"เอกสารนำเสนอวงเงินละดอกเบี้ย",
+type:"xlsx",
+category:"เอกสารทั่วไป",
+isNew:true
+},
+
+
 
 ];
