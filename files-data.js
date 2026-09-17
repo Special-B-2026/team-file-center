@@ -30,32 +30,32 @@ category:"สินเชื่อ"
 
 {
 id:4,
-fileName:"Sales_Script_Loan.pdf",
-title:"SaleScript HL",
+fileName:"Sales_Script_Securedloan_TEL.pdf",
+title:"SaleScript สินเชื่อบ้าน(ไม่พบลูกค้า)",
 type:"pdf",
 category:"สินเชื่อ"
 },
 
 {
 id:5,
-fileName:"Sales_Script_PCN.pdf",
-title:"SaleScript PCN",
+fileName:"Sales_Script_PCKYC.pdf",
+title:"SaleScript PCN(เจอลูกค้า)",
 type:"pdf",
 category:"สินเชื่อ"
 },
 
 {
 id:6,
-fileName:"AWAYA_Sales_Script_SecuredLoan.pdf",
-title:"สินเชื่อมีหลักประกัน โทรAWAYA",
+fileName:"Sales_Script_PCTEL.pdf",
+title:"SaleScript PCN(ไม่เจอลูกค้า)",
 type:"pdf",
 category:"สินเชื่อ"
 },
 
 {
 id:7,
-fileName:"AWAYA_Sales_Script_UnSecuredLoan.pdf",
-title:"สินเชื่อไม่มีหลักประกัน โทรAWAYA",
+fileName:"Sales_Script_Securedloan_KYC.pdf",
+title:"SaleScript สินเชื่อบ้าน(พบลูกค้า)",
 type:"pdf",
 category:"สินเชื่อ"
 },
