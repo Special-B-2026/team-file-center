@@ -311,8 +311,8 @@ category:"โปรชัวร์"
 
 {
 id:37,
-fileName:"Brochure_Re-cashout.pdf",
-title:"โปรชัวร์Re-Cashout",
+fileName:"Brochure_Refinance_Mp.pdf",
+title:"โปรชัวร์ Refinance_MP",
 type:"pdf",
 category:"โปรชัวร์"
 },
@@ -396,10 +396,16 @@ id:47,
 fileName:"Loan_Proposal.xlsx",
 title:"เอกสารนำเสนอวงเงินละดอกเบี้ย",
 type:"xlsx",
-category:"เอกสารทั่วไป",
-isNew:true
+category:"เอกสารทั่วไป"
 },
 
-
+{
+id:48,
+fileName:"Brochure_home1.pdf",
+title:"โปรชัวร์บ้านมือมือหนึ่งบ้านใหม่",
+type:"pdf",
+category:"โปรชัวร์",
+isNew:true
+},
 
 ];
