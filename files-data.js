@@ -225,8 +225,7 @@ id:26,
 fileName:"Interest_Reduction.xlsx",
 title:"ตารางลดดอกเบี้ย",
 type:"excel",
-category:"โปรแกรมคำนวณ",
-isNew:true
+category:"โปรแกรมคำนวณ"
 },
 
 {
@@ -234,7 +233,8 @@ id:27,
 fileName:"MRTA_Calculation.xlsx",
 title:"โปรแกรมคำนวณ MRTA",
 type:"excel",
-category:"โปรแกรมคำนวณ"
+category:"โปรแกรมคำนวณ",
+isNew:true
 },
 
 {
@@ -242,7 +242,8 @@ id:28,
 fileName:"MRTA_Extra.xlsx",
 title:"โปรแกรมคำนวณ MRTA Extra",
 type:"excel",
-category:"โปรแกรมคำนวณ"
+category:"โปรแกรมคำนวณ",
+isNew:true
 },
 
 {
@@ -250,7 +251,8 @@ id:29,
 fileName:"MLTA_Calculation.xlsx",
 title:"โปรแกรมคำนวณ MLTA",
 type:"excel",
-category:"โปรแกรมคำนวณ"
+category:"โปรแกรมคำนวณ",
+isNew:true
 },
 
 {
@@ -258,7 +260,8 @@ id:30,
 fileName:"MLTA_Extra.xlsx",
 title:"โปรแกรมคำนวณ MLTA Extra",
 type:"excel",
-category:"โปรแกรมคำนวณ"
+category:"โปรแกรมคำนวณ",
+isNew:true
 },
 
 {
@@ -387,8 +390,7 @@ id:46,
 fileName:"payment.pdf",
 title:"การโปะค่างวดบ้าน",
 type:"pdf",
-category:"เอกสารทั่วไป",
-isNew:true
+category:"เอกสารทั่วไป"
 },
 
 {
@@ -404,8 +406,7 @@ id:48,
 fileName:"Brochure_home1.pdf",
 title:"โปรชัวร์บ้านมือมือหนึ่งบ้านใหม่",
 type:"pdf",
-category:"โปรชัวร์",
-isNew:true
+category:"โปรชัวร์"
 },
 
 ];
