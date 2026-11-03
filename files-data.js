@@ -30,8 +30,8 @@ category:"สินเชื่อ"
 
 {
 id:4,
-fileName:"Sales_Script_Securedloan_TEL.pdf",
-title:"SaleScript สินเชื่อบ้าน(ไม่พบลูกค้า)",
+fileName:"Call_Script_Securedloan_TEL.pdf",
+title:"CallScript สินเชื่อบ้าน(ไม่พบลูกค้า)",
 type:"pdf",
 category:"สินเชื่อ"
 },
@@ -46,8 +46,8 @@ category:"สินเชื่อ"
 
 {
 id:6,
-fileName:"Sales_Script_PCTEL.pdf",
-title:"SaleScript PCN(ไม่เจอลูกค้า)",
+fileName:"Call_Script_PCTEL.pdf",
+title:"CallScript PCN(ไม่เจอลูกค้า)",
 type:"pdf",
 category:"สินเชื่อ"
 },
