@@ -233,8 +233,7 @@ id:27,
 fileName:"MRTA_Calculation.xlsx",
 title:"โปรแกรมคำนวณ MRTA",
 type:"excel",
-category:"โปรแกรมคำนวณ",
-isNew:true
+category:"โปรแกรมคำนวณ"
 },
 
 {
@@ -242,8 +241,7 @@ id:28,
 fileName:"MRTA_Extra.xlsx",
 title:"โปรแกรมคำนวณ MRTA Extra",
 type:"excel",
-category:"โปรแกรมคำนวณ",
-isNew:true
+category:"โปรแกรมคำนวณ"
 },
 
 {
@@ -251,8 +249,7 @@ id:29,
 fileName:"MLTA_Calculation.xlsx",
 title:"โปรแกรมคำนวณ MLTA",
 type:"excel",
-category:"โปรแกรมคำนวณ",
-isNew:true
+category:"โปรแกรมคำนวณ"
 },
 
 {
@@ -260,8 +257,7 @@ id:30,
 fileName:"MLTA_Extra.xlsx",
 title:"โปรแกรมคำนวณ MLTA Extra",
 type:"excel",
-category:"โปรแกรมคำนวณ",
-isNew:true
+category:"โปรแกรมคำนวณ"
 },
 
 {
@@ -333,8 +329,7 @@ id:39,
 fileName:"Commission_Simulation.xlsx",
 title:"โปรแกรมคำนวณค่าคอมฯ",
 type:"xlsx",
-category:"แบบฟอร์ม",
-updateDate:"2026-08-14"
+category:"แบบฟอร์ม"
 },
 
 {
@@ -408,5 +403,30 @@ title:"โปรชัวร์บ้านมือมือหนึ่งบ�
 type:"pdf",
 category:"โปรชัวร์"
 },
+
+{
+id:49,
+fileName:"Inhouse.xlsx",
+title:"แบบฟอร์มประเมิน IN HOUSE",
+type:"xlsx",
+category:"แบบฟอร์ม"
+},
+
+{
+id:50,
+fileName:"S_inhouse.pdf",
+title:"เงื่อนไขประเมิน IN_HOUSE",
+type:"pdf",
+category:"เอกสารทั่วไป"
+},
+
+{
+id:51,
+fileName:"DV_and_Contract.pdf",
+title:"เอกสารขอลดดอกเบี้ยและใบนัดจดจำนอง",
+type:"pdf",
+category:"เอกสารทั่วไป"
+},
+
 
 ];
