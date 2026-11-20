@@ -160,7 +160,78 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./service-worker.js");
 }
 </script>
+<script>
+// ระบบตรวจสอบการอัปเดตเว็บไซต์อัตโนมัติ
 
+(function () {
+
+    if (location.protocol === "file:") return;
+
+    const files = [
+        "./files-data.js",
+        "./app.js",
+        "./style.css",
+        "./index.html"
+    ];
+
+    let lastVersion = null;
+    let checking = false;
+
+    async function checkUpdate() {
+
+        if (checking || document.hidden) return;
+        checking = true;
+
+        try {
+
+            const currentVersion = JSON.stringify(
+                await Promise.all(files.map(async file => {
+
+                    const response = await fetch(file, {
+                        cache: "no-store"
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Update check failed");
+                    }
+
+                    return await response.text();
+
+                }))
+            );
+
+            if (lastVersion === null) {
+
+                lastVersion = currentVersion;
+
+            } else if (lastVersion !== currentVersion) {
+
+                window.location.reload();
+
+            }
+
+        } catch (error) {
+
+            console.log("Update check:", error);
+
+        } finally {
+
+            checking = false;
+
+        }
+
+    }
+
+    checkUpdate();
+
+    setInterval(checkUpdate, 60000);
+
+    document.addEventListener("visibilitychange", checkUpdate);
+
+    window.addEventListener("online", checkUpdate);
+
+})();
+</script>
 </body>
 
 </html>
