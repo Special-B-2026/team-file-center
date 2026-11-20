@@ -1,45 +1,40 @@
-const CACHE_NAME = "loan-center-20261120-v3";
+/* Loan Document Center - Auto Update */
 
-const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./app.js",
-  "./files-data.js",
-  "./manifest.json"
-];
-
-
+// เปิดใช้งาน Service Worker ใหม่
 self.addEventListener("install", event => {
-    self.skipWaiting();
-
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-        .then(cache => cache.addAll(FILES_TO_CACHE))
-    );
+    event.waitUntil(self.skipWaiting());
 });
 
-
+// ลบแคชเก่าของเว็บไซต์
 self.addEventListener("activate", event => {
     event.waitUntil(
-        caches.keys().then(keys =>
-            Promise.all(
-                keys.map(key => {
-                    if(key !== CACHE_NAME){
-                        return caches.delete(key);
-                    }
-                })
-            )
-        ).then(() => self.clients.claim())
+        caches.keys()
+        .then(keys => Promise.all(
+            keys
+            .filter(key => key.startsWith("loan-center-"))
+            .map(key => caches.delete(key))
+        ))
+        .then(() => self.clients.claim())
     );
 });
 
-
+// เรียกข้อมูลล่าสุดจากอินเทอร์เน็ต
 self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request)
-    .then(response => {
-      return response || fetch(event.request);
-    })
-  );
+
+    const url = new URL(event.request.url);
+
+    if (
+        event.request.method !== "GET" ||
+        url.origin !== self.location.origin ||
+        !url.href.startsWith(self.registration.scope)
+    ) {
+        return;
+    }
+
+    event.respondWith(
+        fetch(event.request, {
+            cache: "no-store"
+        })
+    );
+
 });
