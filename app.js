@@ -90,8 +90,8 @@ function createCard(file){
 
     let icon =
     file.type.toLowerCase() === "pdf"
-    ? "📕"
-    : "📗";
+    ? "\u{1F4DA}"
+    : "\u{1F4D6}";
 
 
 
