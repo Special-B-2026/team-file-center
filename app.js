@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-
-
 // =======================================
 // Render Files
 // =======================================
@@ -124,10 +122,10 @@ ${file.isNew ? '<span class="new-badge">NEW</span>' : ''}
         </p>
 
 
-        <a
+<a
 class="download"
-href="./files/${file.fileName}?v=${file.id}"
-target="_blank"
+href="./files/${file.fileName}${["word","docx","doc"].includes(file.type.toLowerCase()) ? "" : "?v=" + file.id}"
+${["word","docx","doc"].includes(file.type.toLowerCase()) ? 'download' : 'target="_blank"'}
 onclick="countDownload('${file.fileName}')">
 ดาวน์โหลด
 </a>
