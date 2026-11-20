@@ -437,5 +437,40 @@ category:"เอกสารแก้ไขได้",
 isNew:true
 },
 
+{
+id:53,
+fileName:"Home100.docx",
+title:"บันทึกบ้าน 100%",
+type:"docx",
+category:"เอกสารแก้ไขได้",
+isNew:true
+},
+
+{
+id:54,
+fileName:"Construction.docx",
+title:"บันทึกขยายงวดงานบ้านสั่งสร้าง",
+type:"docx",
+category:"เอกสารแก้ไขได้",
+isNew:true
+},
+
+{
+id:55,
+fileName:"ST1.docx",
+title:"จัดเกรดโครงการ Standard",
+type:"docx",
+category:"เอกสารแก้ไขได้",
+isNew:true
+},
+
+{
+id:56,
+fileName:"Focus.docx",
+title:"จัดเกรดโครงการ Focus",
+type:"docx",
+category:"เอกสารแก้ไขได้",
+isNew:true
+}
 
 ];
