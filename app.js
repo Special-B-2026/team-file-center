@@ -37,11 +37,11 @@ function renderFiles(data){
 
     const pdfBox = document.getElementById("pdfList");
     const excelBox = document.getElementById("excelList");
-
+    const wordBox = document.getElementById("wordList");
 
     if(pdfBox) pdfBox.innerHTML = "";
     if(excelBox) excelBox.innerHTML = "";
-
+    if(wordBox) wordBox.innerHTML = "";
 
 
     data.forEach(file=>{
@@ -70,7 +70,13 @@ function renderFiles(data){
             excelBox.innerHTML += card;
 
         }
-
+else if(
+    type === "word" ||
+    type === "docx" ||
+    type === "doc"
+){
+    if(wordBox) wordBox.innerHTML += card;
+}
 
     });
 
@@ -91,6 +97,8 @@ function createCard(file){
     let icon =
     file.type.toLowerCase() === "pdf"
     ? "\u{1F4DA}"
+    : ["word", "docx", "doc"].includes(file.type.toLowerCase())
+    ? "\u{1F4DD}"
     : "\u{1F4D6}";
 
 
@@ -171,7 +179,16 @@ function updateSummary(){
     if(excelCount)
         excelCount.innerText = excel;
 
+let word = FILE_LIBRARY.filter(file =>
+    file.type.toLowerCase() === "word" ||
+    file.type.toLowerCase() === "docx" ||
+    file.type.toLowerCase() === "doc"
+).length;
 
+const wordCount = document.getElementById("wordCount");
+
+if(wordCount)
+    wordCount.innerText = word;
 
     fetch(STAT_API + "?action=summary")
     .then(res => res.json())
